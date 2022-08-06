@@ -1,1 +1,21 @@
+# PVE 安装openwrt
 
+---
+
+## 1、 拷贝iso镜像到本地磁盘
+
+```cpp
+qm importdisk 103 /var/lib/vz/template/iso/openwrt-07.16.2022-x86-64.img local-lvm
+
+qm importdisk 主机号 镜像地址 local-lvm
+```
+
+## 2、修改ip、网关
+
+```cpp
+vim /etc/config/network
+按"**i"**键更改IP地址
+再按"**ESC"**键
+再按":**wq"**保存退出
+"reboot"重启即可。
+```
